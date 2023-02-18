@@ -16,7 +16,7 @@ function App() {
   });
   const getWeather = (e) => {
   e.preventDefault();
-  axios.get("http://api.weatherapi.com/v1/current.json?key=52b6ce11cb6b4f9c9b3113117231802&q=London&aqi=no")
+  axios.get(`http://api.weatherapi.com/v1/current.json?key=52b6ce11cb6b4f9c9b3113117231802&q=${city}&aqi=no`)
   .then(res => {
     setResults({
       country: res.data.location.country,
